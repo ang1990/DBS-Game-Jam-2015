@@ -7,6 +7,8 @@ public class PlayerData : MonoBehaviour {
 	float bearsKilled = 0;
 	float moveSpeed = 0;
 
+	UIManager ui;
+
 	float gameTimeElapsed = 0.0f;
 
 	bool lose = false;
@@ -21,7 +23,7 @@ public class PlayerData : MonoBehaviour {
 		cash = 1000;
 		bearsKilled = 0;
 		lose = false;
-
+		ui = GameObject.Find ("GameManager").GetComponent<UIManager> ();
 		gameTimeElapsed = 0.0f;
 	}
 
@@ -32,6 +34,7 @@ public class PlayerData : MonoBehaviour {
 
 	public void AddCash(uint _amt = 1) {
 		cash += _amt;
+		ui.UpdateCashText (cash);
 	}
 
 	public void LoseCash(uint _amt = 1) {
@@ -41,12 +44,14 @@ public class PlayerData : MonoBehaviour {
 		}
 		else
 			cash -= _amt;
+		ui.UpdateCashText (cash);
 	}
 
 	public bool SpendCash(uint _amt = 1) {
 		if (cash < _amt)
 			return false;
 		cash -= _amt;
+		ui.UpdateCashText (cash);
 		return true;
 	}
 
