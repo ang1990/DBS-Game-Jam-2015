@@ -3,21 +3,23 @@ using System.Collections;
 
 public class PlayerData : MonoBehaviour {
 
-	int cash = 0;
+	uint cash = 0;
 	float bearsKilled = 0;
 	float moveSpeed = 0;
-
-	int active1Level = 0;
-	int active2Level = 0;
-	int active3Level = 0;
-
-	int jobLevel = 0;
-	int businessLevel = 0;
-	int stocksLevel = 0;
 
 	float gameTimeElapsed = 0.0f;
 
 	bool lose = false;
+
+	// Please refer to scene manager.
+	bool IsPlaying() {
+		return false;
+	}
+
+	void FixedUpdate() {
+		if (IsPlaying ())
+			gameTimeElapsed += Time.fixedDeltaTime;
+	}
 
 	// Use this for initialization
 	void Awake() {
@@ -25,25 +27,27 @@ public class PlayerData : MonoBehaviour {
 		bearsKilled = 0;
 		lose = false;
 
-		active1Level = 0;
-		active2Level = 0;
-		active3Level = 0;
-
-		jobLevel = 0;
-		businessLevel = 0;
-		stocksLevel = 0;
-
 		gameTimeElapsed = 0.0f;
 	}
 
 	void AddCash(uint _amt = 1) {
-		cash += (int)_amt;
+		cash += _amt;
 	}
 
-	void RemoveCash(uint _amt = 1) {
-		cash -= (int)_amt;
-		if (cash < 0)
+	void LoseCash(uint _amt = 1) {
+		if (cash < _amt) {
 			lose = true;
+			cash = 0;
+		}
+		else
+			cash -= _amt;
+	}
+
+	bool SpendCash(uint _amt = 1) {
+		if (cash < _amt)
+			return false;
+		cash -= _amt;
+		return true;
 	}
 
 	void KillBear() {
