@@ -11,11 +11,6 @@ public class PlayerData : MonoBehaviour {
 
 	bool lose = false;
 
-	// Please refer to scene manager.
-	bool IsPlaying() {
-		return false;
-	}
-
 	void FixedUpdate() {
 		if (IsPlaying ())
 			gameTimeElapsed += Time.fixedDeltaTime;
@@ -30,11 +25,16 @@ public class PlayerData : MonoBehaviour {
 		gameTimeElapsed = 0.0f;
 	}
 
-	void AddCash(uint _amt = 1) {
+	// Please refer to scene manager.
+	public bool IsPlaying() {
+		return false;
+	}
+
+	public void AddCash(uint _amt = 1) {
 		cash += _amt;
 	}
 
-	void LoseCash(uint _amt = 1) {
+	public void LoseCash(uint _amt = 1) {
 		if (cash < _amt) {
 			lose = true;
 			cash = 0;
@@ -43,22 +43,22 @@ public class PlayerData : MonoBehaviour {
 			cash -= _amt;
 	}
 
-	bool SpendCash(uint _amt = 1) {
+	public bool SpendCash(uint _amt = 1) {
 		if (cash < _amt)
 			return false;
 		cash -= _amt;
 		return true;
 	}
 
-	void KillBear() {
+	public void KillBear() {
 		bearsKilled += 1;
 	}
 
-	float getMoveSpeed() {
+	public float getMoveSpeed() {
 		return moveSpeed;
 	}
 
-	bool gameIsLost() {
+	public bool gameIsLost() {
 		return lose;
 	}
 }
