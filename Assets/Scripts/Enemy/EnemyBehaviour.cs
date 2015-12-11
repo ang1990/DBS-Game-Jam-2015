@@ -24,7 +24,6 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		Debug.Log (other.tag);
 		if (other.CompareTag ("EnemyEndpoint")) {
 			Explode ();
 		}
