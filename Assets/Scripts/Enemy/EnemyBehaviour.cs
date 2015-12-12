@@ -12,6 +12,8 @@ public class EnemyBehaviour : MonoBehaviour {
 	int bombDamage = 100;
 	int cashGain = 50;
 
+	bool isMoving = true;
+
 	// Use this for initialization
 	void Start () {
 		explosion = null;
@@ -20,7 +22,8 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		transform.Translate (Time.fixedDeltaTime * moveSpeed * Vector3.left);
+		if(isMoving)
+			transform.Translate (Time.fixedDeltaTime * moveSpeed * Vector3.left);
 	}
 
 	void OnTriggerEnter(Collider other) {
@@ -33,6 +36,12 @@ public class EnemyBehaviour : MonoBehaviour {
 		}
 	}
 
+	public IEnumerator stun(float time) {
+		isMoving = false;
+		yield return new WaitForSeconds (time);
+		isMoving = true;
+	}
+		
 	void Explode() {
 		pData.LoseCash ((uint)bombDamage);
 		if (explosion != null)
@@ -42,6 +51,8 @@ public class EnemyBehaviour : MonoBehaviour {
 
 	public void ReceiveHit() {
 		pData.AddCash (50);
+		SkillHandler playerSkill = GameObject.Find ("Player").GetComponent<SkillHandler> ();
+		playerSkill.AddCharge ();
 		Destroy (gameObject);
 	}
 }

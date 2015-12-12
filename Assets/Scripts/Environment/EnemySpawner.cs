@@ -18,7 +18,7 @@ public class EnemySpawner : MonoBehaviour {
 	WaveState currentState;
 	int waveNum;
 	int enemiesToSpawn;
-	float timeBetweenWaves = 10;
+	float timeBetweenWaves = 1;
 	float timeToNextWave;
 	PlayerData pData;
 
@@ -79,8 +79,7 @@ public class EnemySpawner : MonoBehaviour {
 	}
 		
 	int getNumberOfEnemies (int waveNum) {
-	//	return waveNum * waveNum * difficulty;
-		return 3;
+		return waveNum * waveNum * difficulty;
 	}
 
 	void SpawnBear() {
