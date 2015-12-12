@@ -3,14 +3,14 @@ using System.Collections;
 
 public class StockMarketLogic : MonoBehaviour {
 
-	public uint currentStockPricePerUnit = 500;
-	public uint currentUnit = 0;
-	public uint averageCost = 0;
-	public uint cost = 0;
-	public uint worth = 0;
-	public uint profitLossDifference = 0;
+	public int currentStockPricePerUnit = 500;
+	public int currentUnit = 0;
+	public int averageCost = 0;
+	public int cost = 0;
+	public int worth = 0;
+	public int profitLossDifference = 0;
 
-	public uint buyingUnit = 100;
+	public int buyingUnit = 100;
 
 	UIManager ui;
 
@@ -24,19 +24,23 @@ public class StockMarketLogic : MonoBehaviour {
 		profitLossDifference = 0;
 		ui = GameObject.Find ("GameManager").GetComponent<UIManager> ();
 	}
+
+	void FixedUpdate(){
+		ui.UpdateStockMarketText (averageCost, currentStockPricePerUnit, currentUnit, cost, worth, profitLossDifference);
+	}
 	
 	// Update is called once per frame
 	public void updateBuyingStock () {
 		currentUnit += buyingUnit;
 		cost += buyingUnit * currentStockPricePerUnit;
-		averageCost = cost / currentUnit;
+		averageCost = (int) cost / currentUnit;
 		worth = currentUnit * currentStockPricePerUnit;
 		profitLossDifference = worth - cost;
 		ui.UpdateStockMarketText (averageCost, currentStockPricePerUnit, currentUnit, cost, worth, profitLossDifference);
 	}
 
-	public uint getSellingStock () {
-		uint finalProfit = currentUnit * currentStockPricePerUnit;
+	public int getSellingStock () {
+		int finalProfit = currentUnit * currentStockPricePerUnit;
 
 		averageCost = 0;
 		currentUnit = 0;

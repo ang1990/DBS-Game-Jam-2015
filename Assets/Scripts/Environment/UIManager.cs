@@ -37,12 +37,12 @@ public class UIManager : MonoBehaviour {
 		profitLossText.text = stockMarketLogic.profitLossDifference.ToString ();
 	}
 
-	public void UpdateStockMarketText(	uint averageCostVal, 
-										uint currentStockPriceVal,
-										uint currentUnitVal, 
-										uint costsVal, 
-										uint worthVal, 
-										uint profitLossVal) {
+	public void UpdateStockMarketText(	int averageCostVal, 
+										int currentStockPriceVal,
+										int currentUnitVal, 
+										int costsVal, 
+										int worthVal, 
+										int profitLossVal) {
 		averageCostText.text = "$" + averageCostVal.ToString();
 		currentStockPriceText.text = "$" + currentStockPriceVal.ToString ();
 		currentStockUnitText.text = currentUnitVal.ToString ();
@@ -51,7 +51,7 @@ public class UIManager : MonoBehaviour {
 		profitLossText.text = "$" + profitLossVal.ToString ();
 	}
 
-	public void UpdateCashText(uint value) {
+	public void UpdateCashText(int value) {
 		cashText.text = "$" + value.ToString ();
 	}
 

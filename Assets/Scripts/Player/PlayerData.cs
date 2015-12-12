@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerData : MonoBehaviour {
 
-	public uint cash = 0;
+	public int cash = 0;
 	float bearsKilled = 0;
 	float moveSpeed = 0;
 
@@ -15,12 +15,16 @@ public class PlayerData : MonoBehaviour {
 	OpenVentureLogic openVentureLogic;
 
 	float gameTimeElapsed = 0.0f;
+	float timeElapsedInteger = 0.0f;
 
 	bool isLosing = false;
 
 	void FixedUpdate() {
 		if (IsPlaying ())
-			gameTimeElapsed += Time.fixedDeltaTime;
+			gameTimeElapsed += Time.timeSinceLevelLoad;
+		if(gameTimeElapsed - timeElapsedInteger >= 1.0f){
+			timeElapsedInteger += 1.0f;
+		}
 	}
 
 	// Use this for initialization
@@ -32,6 +36,7 @@ public class PlayerData : MonoBehaviour {
 		stockMarketLogic = GameObject.Find ("GameManager").GetComponent<StockMarketLogic> ();
 		openVentureLogic = GameObject.Find ("GameManager").GetComponent<OpenVentureLogic> ();
 		gameTimeElapsed = 0.0f;
+		timeElapsedInteger = 0.0f;
 	}
 
 	public bool gameIsWon() {
@@ -43,13 +48,13 @@ public class PlayerData : MonoBehaviour {
 		return false;
 	}
 
-	public void AddCash(uint _amt = 1) {
+	public void AddCash(int _amt = 1) {
 		cash += _amt;
 		ui.UpdateCashText (cash);
 	}
 
-	public void LoseCash(uint _amt = 1) {
-		if (cash < _amt) {
+	public void LoseCash(int _amt = 1) {
+		if (cash <= _amt) {
 			isLosing = true;
 			cash = 0;
 		}
@@ -58,8 +63,8 @@ public class PlayerData : MonoBehaviour {
 		ui.UpdateCashText (cash);
 	}
 
-	public bool SpendCash(uint _amt = 1) {
-		if (cash < _amt)
+	public bool SpendCash(int _amt = 1) {
+		if (cash <= _amt)
 			return false;
 		cash -= _amt;
 		ui.UpdateCashText (cash);
@@ -84,6 +89,7 @@ public class PlayerData : MonoBehaviour {
 		if ( (stockMarketLogic.currentStockPricePerUnit * stockMarketLogic.buyingUnit) <= cash) {
 			cash -= stockMarketLogic.currentStockPricePerUnit * stockMarketLogic.buyingUnit;
 			stockMarketLogic.updateBuyingStock ();
+			ui.UpdateCashText (cash);
 		}
     }
 
@@ -91,6 +97,7 @@ public class PlayerData : MonoBehaviour {
     {
 		if (stockMarketLogic.currentUnit > 0.0f){
 			cash += stockMarketLogic.getSellingStock ();
+			ui.UpdateCashText (cash);
 		}
     }
 }

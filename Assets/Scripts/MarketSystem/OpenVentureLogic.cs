@@ -3,7 +3,7 @@ using System.Collections;
 
 public class OpenVentureLogic : MonoBehaviour {
 
-	uint capital = 0;
+	int capital = 0;
 	float profitPercentage = 0;
 	PlayerData playerData;
 	OverallMarketLogic overallMarketLogic;
@@ -12,13 +12,13 @@ public class OpenVentureLogic : MonoBehaviour {
 	void Awake () {
 		playerData = GameObject.Find("GameManager").GetComponent<PlayerData> ();
 		overallMarketLogic = GameObject.Find ("GameManager").GetComponent<OverallMarketLogic> ();
-		InvokeRepeating ("GenerateProfit", overallMarketLogic.timerSec, overallMarketLogic.timerSec);
+		InvokeRepeating ("GenerateProfit", overallMarketLogic.timerInSec, overallMarketLogic.timerInSec);
 	}
 	
 	// Update is called once per frame
-	uint GenerateProfit () {
+	int GenerateProfit () {
 		profitPercentage = Random.Range (1.01f, 1.05f);
-		uint newCapital = (uint) (capital * profitPercentage);
+		int newCapital = (int) (capital * profitPercentage);
 		return newCapital - capital;
 	}
 }

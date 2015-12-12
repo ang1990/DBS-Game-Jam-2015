@@ -29,10 +29,10 @@ public class GameStateManager : MonoBehaviour {
 			}
 			break;
 		case GameState.Victory:
-			Application.LoadLevel ("Win");
+			//Application.LoadLevel ("Win");
 			break;
 		case GameState.Defeat:
-			Application.LoadLevel ("Lose");
+			//Application.LoadLevel ("Lose");
 			break;
 		default:
 			break;
