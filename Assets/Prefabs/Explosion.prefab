@@ -41,10 +41,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: daebc4f6cfaec71499265fb3b98da8ab, type: 3}
-  - {fileID: 21300000, guid: a0620ca3fa9f87942b79e5fcf3fc86b8, type: 3}
-  - {fileID: 21300000, guid: 07decfffdf8b3c248af853b8082e2e32, type: 3}
-  - {fileID: 21300000, guid: 8e50c79ff2f476943966139df7446839, type: 3}
+  - {fileID: 21300000, guid: 3716a5f6dfc67864a9df2a8a960d788a, type: 3}
+  - {fileID: 21300000, guid: e9e1375a02297fe43aa97c3e681c8cce, type: 3}
+  - {fileID: 21300000, guid: 2604c12bef8685147800c4c4b4ecbd7a, type: 3}
+  - {fileID: 21300000, guid: bfd3147514b6cb4408f8dece6fcc7a98, type: 3}
 --- !u!212 &21239542
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -94,6 +94,26 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3716a5f6dfc67864a9df2a8a960d788a,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: e9e1375a02297fe43aa97c3e681c8cce,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2604c12bef8685147800c4c4b4ecbd7a,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: bfd3147514b6cb4408f8dece6fcc7a98,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 195646}
