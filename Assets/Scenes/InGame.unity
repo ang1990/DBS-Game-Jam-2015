@@ -2339,7 +2339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5916e356993b54478f46183e181bbe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cash: 0
+  cash: 1000000
   stock: 0
 --- !u!114 &2094979071
 MonoBehaviour:
