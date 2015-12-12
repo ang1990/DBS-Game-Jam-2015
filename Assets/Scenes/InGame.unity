@@ -1179,10 +1179,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2763,7 +2763,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1823476133}
   m_LocalRotation: {x: 0.30070582, y: 0, z: 0, w: 0.95371693}
-  m_LocalPosition: {x: -2.657, y: 1.435, z: 2.996}
+  m_LocalPosition: {x: -2.657, y: 1.471, z: 3.259}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3100,7 +3100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c4d1c8ea9e2f4043900a268c8665f37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stockChange: 50000
 --- !u!4 &2094979069
 Transform:
   m_ObjectHideFlags: 0
@@ -3125,7 +3124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cash: 1000000
-  stock: 0
+  victoryCashRequirement: 5000000
 --- !u!114 &2094979071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3137,6 +3136,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88fe29cbfb75c6148bc326452218f3ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStockPricePerUnit: 0
+  currentUnit: 0
+  averageCost: 0
+  cost: 0
+  worth: 0
+  profitLossDifference: 0
+  buyingUnit: 0
+  sellingUnit: 0
 --- !u!114 &2094979072
 MonoBehaviour:
   m_ObjectHideFlags: 0
