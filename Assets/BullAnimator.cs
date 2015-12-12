@@ -30,16 +30,22 @@ public class BullAnimator : MonoBehaviour {
 	}
 
 	public void setAttack() {
+		if (currentState == BullAnimState.Striking)
+			return;
 		currentState = BullAnimState.Striking;
 		currentFrame = 0;
 	}
 
 	public void setMoving() {
+		if (currentState == BullAnimState.Moving || currentState == BullAnimState.Striking)
+			return;
 		currentState = BullAnimState.Moving;
 		currentFrame = 0;
 	}
 
 	public void setIdle() {
+		if (currentState == BullAnimState.Idle || currentState == BullAnimState.Striking)
+			return;
 		currentState = BullAnimState.Idle;
 		currentFrame = 0;
 	}
