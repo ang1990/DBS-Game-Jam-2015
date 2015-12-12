@@ -15,6 +15,8 @@ public class SkillHandler : MonoBehaviour {
 	float updateSpriteTime = 0.2f;
 	float lastUpdateTime;
 
+	int numberOfCharges = 10;
+
 	// Use this for initialization
 	void Awake () {
 		img = GameObject.Find ("SkillButton").GetComponent<Image> ();
@@ -34,13 +36,19 @@ public class SkillHandler : MonoBehaviour {
 	}
 
 	public void AddCharge() {
-		if (chargeLevel == 10)
+		if (chargeLevel == numberOfCharges)
 			return;
 		chargeLevel++;
-		if (chargeLevel == 10) {
+		if (chargeLevel == numberOfCharges) {
 			fullyCharged = true;
 		}
 		img.sprite = sprites [chargeLevel];
+	}
+
+	void ResetCharges() {
+		fullyCharged = false;
+		chargeLevel = 0;
+		img.sprite = sprites [0];
 	}
 
 	void Update() {
@@ -59,10 +67,11 @@ public class SkillHandler : MonoBehaviour {
 		// Fade to white animation.
 		GameObject.Find ("FadingPanel").GetComponent<FadeToWhiteAnimate> ().RunAction ();
 		StartCoroutine (HandleBears ());
-		fullyCharged = false;
+
 	}
 
 	IEnumerator HandleBears() {
+		ResetCharges ();
 		GameObject[] bears = GameObject.FindGameObjectsWithTag ("Enemy");
 		foreach(GameObject bear in bears) {
 			EnemyBehaviour scr = bear.GetComponent<EnemyBehaviour> ();
@@ -73,5 +82,6 @@ public class SkillHandler : MonoBehaviour {
 			EnemyBehaviour scr = bear.GetComponent<EnemyBehaviour> ();
 			scr.ReceiveHit ();
 		}
+		ResetCharges ();
 	}
 }
