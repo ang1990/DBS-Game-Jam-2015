@@ -87,7 +87,7 @@ public class EnemySpawner : MonoBehaviour {
 		float xCoord = spawnBounds.center.x;
 		float yCoord = spawnBounds.center.y;
 		Vector3 newSpawnPoint = new Vector3 (xCoord, yCoord, zCoord);
-		Instantiate (enemyPrefab, newSpawnPoint, Quaternion.identity);
+		Instantiate (enemyPrefab, newSpawnPoint, Quaternion.AngleAxis(35,Vector3.right));
 		enemiesToSpawn--;
 //		Debug.Log("Bears left: " + enemiesToSpawn.ToString());
 	}
