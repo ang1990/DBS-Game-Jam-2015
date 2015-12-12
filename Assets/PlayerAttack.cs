@@ -4,14 +4,15 @@ using System.Collections;
 public class PlayerAttack : MonoBehaviour {
 
 	public AudioClip swoosh;
+	float lastAttackTime;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetMouseButtonDown (0))
+			PlayerAttack ();
+	}
+
+	void PlayerAttack() {
 	
 	}
 }

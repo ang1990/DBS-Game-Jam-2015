@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Menu\MainMenuManager.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerBehaviour.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
+     <Compile Include="Assets\Scripts\sprite_rend.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

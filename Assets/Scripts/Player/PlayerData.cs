@@ -3,7 +3,9 @@ using System.Collections;
 
 public class PlayerData : MonoBehaviour {
 
-	uint cash = 0;
+	public uint cash = 0;
+    public uint stock = 0;
+    uint maxStockPrice = 500000;
 	float bearsKilled = 0;
 	float moveSpeed = 0;
 
@@ -20,7 +22,8 @@ public class PlayerData : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake() {
-		cash = 1000;
+		cash = 1000000;
+        stock = 50000;
 		bearsKilled = 0;
 		lose = false;
 		ui = GameObject.Find ("GameManager").GetComponent<UIManager> ();
@@ -66,4 +69,23 @@ public class PlayerData : MonoBehaviour {
 	public bool gameIsLost() {
 		return lose;
 	}
+
+    // For button presses
+    public void addStockPressed()
+    {
+        if (stock + ui.stockChange <= maxStockPrice)
+        {
+            stock += ui.stockChange;
+            ui.UpdateStockText(stock);
+        }
+    }
+
+    public void minusStockPressed()
+    {
+        if (stock >= ui.stockChange)
+        {
+            stock -= ui.stockChange;
+            ui.UpdateStockText(stock);
+        }
+    }
 }
