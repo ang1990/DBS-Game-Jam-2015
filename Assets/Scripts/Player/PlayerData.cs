@@ -4,18 +4,19 @@ using System.Collections;
 public class PlayerData : MonoBehaviour {
 
 	public uint cash = 0;
-    public uint stock = 0;
-    uint maxStockPrice = 500000;
 	float bearsKilled = 0;
 	float moveSpeed = 0;
 
-	float victoryCashRequirement = 5000000;
+	public float victoryCashRequirement = 5000000f;
 
 	UIManager ui;
+	OverallMarketLogic overallMarketLogic;
+	StockMarketLogic stockMarketLogic;
+	OpenVentureLogic openVentureLogic;
 
 	float gameTimeElapsed = 0.0f;
 
-	bool lose = false;
+	bool isLosing = false;
 
 	void FixedUpdate() {
 		if (IsPlaying ())
@@ -25,7 +26,7 @@ public class PlayerData : MonoBehaviour {
 	// Use this for initialization
 	void Awake() {
 		bearsKilled = 0;
-		lose = false;
+		isLosing = false;
 		ui = GameObject.Find ("GameManager").GetComponent<UIManager> ();
 		gameTimeElapsed = 0.0f;
 	}
@@ -46,7 +47,7 @@ public class PlayerData : MonoBehaviour {
 
 	public void LoseCash(uint _amt = 1) {
 		if (cash < _amt) {
-			lose = true;
+			isLosing = true;
 			cash = 0;
 		}
 		else
@@ -71,25 +72,21 @@ public class PlayerData : MonoBehaviour {
 	}
 
 	public bool gameIsLost() {
-		return lose;
+		return isLosing;
 	}
 
     // For button presses
-    public void addStockPressed()
+    public void buyStockPressed()
     {
-        if (stock + ui.stockChange <= maxStockPrice)
-        {
-            stock += ui.stockChange;
-            ui.UpdateStockText(stock);
-        }
+		if (stockMarketLogic.currentStockPricePerUnit * 100 <= cash) {
+			stockMarketLogic.updateBuyingStock ();
+		}
     }
 
-    public void minusStockPressed()
+    public void sellStockPressed()
     {
-        if (stock >= ui.stockChange)
-        {
-            stock -= ui.stockChange;
-            ui.UpdateStockText(stock);
-        }
+		if (stockMarketLogic.currentUnit > 0.0f){
+
+		}
     }
 }

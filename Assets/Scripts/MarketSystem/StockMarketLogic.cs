@@ -3,14 +3,15 @@ using System.Collections;
 
 public class StockMarketLogic : MonoBehaviour {
 
-	uint currentStockPricePerUnit = 0;
-	uint currentUnit = 0;
-	uint buyingUnit = 0;
-	uint sellingUnit = 0; 
-	uint cost = 0;
-	uint worth = 0;
-	uint averageCost = 0;
-	uint profitLossDifference = 0;
+	public uint currentStockPricePerUnit = 0;
+	public uint currentUnit = 0;
+	public uint averageCost = 0;
+	public uint cost = 0;
+	public uint worth = 0;
+	public uint profitLossDifference = 0;
+
+	public uint buyingUnit = 0;
+	public uint sellingUnit = 0; 
 
 	// Use this for initializationstockPricePerUnit
 	void Awake () {
@@ -26,7 +27,7 @@ public class StockMarketLogic : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void updateBuyingStock () {
+	public void updateBuyingStock () {
 		currentUnit += buyingUnit;
 		sellingUnit = currentUnit;
 		cost += buyingUnit * currentStockPricePerUnit;
@@ -35,7 +36,7 @@ public class StockMarketLogic : MonoBehaviour {
 		profitLossDifference = worth - cost;
 	}
 
-	uint getSellingStock () {
+	public uint getSellingStock () {
 		uint finalProfit = currentUnit * currentStockPricePerUnit;
 		currentUnit = 0;
 		sellingUnit = 0;
