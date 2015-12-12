@@ -3,16 +3,19 @@ using System.Collections;
 
 public class OverallMarketLogic : MonoBehaviour {
 
-	public uint timerSec = 0;
+	public float timerInSec = 0.0f;
 
+	StockMarketLogic stockMarketLogic;
 
 	// Use this for initialization
 	void Awake () {
-		timerSec = 5;
+		timerInSec = 5.0f;
+		InvokeRepeating ("changeStockPrice", 0.0f, timerInSec);
+		stockMarketLogic = GameObject.Find ("GameManager").GetComponent<StockMarketLogic> ();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void changeStockPrice(){
+		stockMarketLogic.currentStockPricePerUnit = (int) ((double)stockMarketLogic.currentStockPricePerUnit * Random.Range (0.96f, 1.06f));
 	}
 }

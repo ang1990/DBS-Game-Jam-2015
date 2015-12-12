@@ -11,7 +11,7 @@ public class BuildingBehaviour : MonoBehaviour {
 	PlayerData pData;
 
 	// Change value in inspector!
-	public uint ventureCapital;
+	public int ventureCapital;
 
 	// Use this for initialization
 	void Awake () {

@@ -3,20 +3,17 @@ using System.Collections;
 
 public class BearAnimator : MonoBehaviour {
 
-	Transform _transform;
-
 	public Sprite[] sprites;
 	SpriteRenderer sr;
 
 	float timeSinceLastUpdate;
 	float timeBetweenUpdates = 0.05f;
 
-	int frameNum;
+	int frameNum = 0;
 
 	// Use this for initialization
 	void Start () {
 		sr = GetComponent<SpriteRenderer> ();
-		frameNum = 0;
 		timeSinceLastUpdate = Time.timeSinceLevelLoad;
 	}
 	
