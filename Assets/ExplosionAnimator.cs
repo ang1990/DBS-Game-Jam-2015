@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ExplosionAnimator : MonoBehaviour {
 
-	public Sprite sprites[];
+	//public Sprite sprites[];
 
 	// Use this for initialization
 	void Start () {
