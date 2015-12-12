@@ -43,7 +43,7 @@ public class EnemyBehaviour : MonoBehaviour {
 		
 	void Explode() {
 		pData.LoseCash ((uint)bombDamage);
-		Instantiate (explosion, transform.position + new Vector3(0.0f,0.0f, -0.5f), Quaternion.identity);
+		Instantiate (explosion, transform.position + new Vector3(0.0f,0.0f, -0.3f), Quaternion.identity);
 		Destroy (gameObject);
 	}
 
