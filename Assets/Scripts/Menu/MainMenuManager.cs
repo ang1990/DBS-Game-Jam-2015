@@ -4,25 +4,16 @@ using System.Collections;
 public class MainMenuManager : MonoBehaviour {
 
     public GameObject MainMenuObject;
-<<<<<<< HEAD
     public GameObject CreditsObject;
-=======
-    public GameObject InstructionsObject;
->>>>>>> d8d497d1a6cd04e2071e60102f3eb6d171cc92f6
 
 	// Use this for initialization
 	void Start () {
         MainMenuObject = GameObject.Find("MainMenuObject");
         MainMenuObject.SetActive(true);
-<<<<<<< HEAD
 
 
         CreditsObject = GameObject.Find("CreditObject");
         CreditsObject.SetActive(false);
-=======
-        InstructionsObject = GameObject.Find("InstructionsObject");
-        InstructionsObject.SetActive(false);
->>>>>>> d8d497d1a6cd04e2071e60102f3eb6d171cc92f6
 	}
 	
 	// Update is called once per frame
