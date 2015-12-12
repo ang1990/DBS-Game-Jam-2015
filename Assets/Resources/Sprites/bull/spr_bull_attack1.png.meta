@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Resources/Sprites/bull/spr_bull_attack1.png.meta
 guid: 280037fcffc6b71499f1f03185e6dd21
-timeCreated: 1449945728
-=======
-guid: 414b8e4bbfa13384fabf8b6a954c4cf1
-timeCreated: 1449945829
->>>>>>> f9898e2a9cc256a0dc4a0d9772c464a064f34992:Assets/Resources/Sprites/bull/spr_bull_attack1.png.meta
-licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2

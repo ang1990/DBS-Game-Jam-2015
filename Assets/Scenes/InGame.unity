@@ -1501,7 +1501,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1591,7 +1591,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2602bd44898e19c4682c2565d4ce401a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2fe1a55fad950341a53d3dc2be2e3ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1682,16 +1682,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idleSprites:
-  - {fileID: 21300000, guid: 2602bd44898e19c4682c2565d4ce401a, type: 3}
+  - {fileID: 21300000, guid: f2fe1a55fad950341a53d3dc2be2e3ce, type: 3}
   moveSprites:
-  - {fileID: 21300000, guid: 6835a3b952d80e8428a06e609e974f90, type: 3}
-  - {fileID: 21300000, guid: d93890904d8ff204d881a9060f9a8668, type: 3}
-  - {fileID: 21300000, guid: 83235a106e89eb249a37bdd38eedd68e, type: 3}
-  - {fileID: 21300000, guid: 463eea712c110584088a4e576fbf5f29, type: 3}
+  - {fileID: 21300000, guid: 26d26a9cf70a18c41a20adf18f731b7d, type: 3}
+  - {fileID: 21300000, guid: eb8b9cd7baa8e56409d80dafed074857, type: 3}
+  - {fileID: 21300000, guid: f28753163783a354f9fda803e6fb2a76, type: 3}
+  - {fileID: 21300000, guid: 9ad2c9ef0fab38c48a7a6b20591dc0cd, type: 3}
   strikeSprites:
-  - {fileID: 21300000, guid: 414b8e4bbfa13384fabf8b6a954c4cf1, type: 3}
-  - {fileID: 21300000, guid: 528c57d637dad0845907249e1df8ad74, type: 3}
-  - {fileID: 21300000, guid: f1fe2d1f183ee404c8422c9fa0072e2d, type: 3}
+  - {fileID: 21300000, guid: 280037fcffc6b71499f1f03185e6dd21, type: 3}
+  - {fileID: 21300000, guid: 4884fece733db1b498e2fd0c2e0c90e3, type: 3}
+  - {fileID: 21300000, guid: 035bc67a1fe1e974b9fcd16874239837, type: 3}
 --- !u!1 &963370127
 GameObject:
   m_ObjectHideFlags: 0

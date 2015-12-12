@@ -71,10 +71,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: c2e8c21ee4d65fd49945c3d8c64e32d6, type: 3}
-  - {fileID: 21300000, guid: c36bc42f1b2eaf74d9d03972e67ed69e, type: 3}
-  - {fileID: 21300000, guid: 2e063a5aa46fd9c428b5cc7edbd8f49b, type: 3}
-  - {fileID: 21300000, guid: c36bc42f1b2eaf74d9d03972e67ed69e, type: 3}
+  - {fileID: 21300000, guid: 9fad72d2b178bee41af52addff6736c1, type: 3}
+  - {fileID: 21300000, guid: 85425a94a952e5a47aa269286e3c5e79, type: 3}
+  - {fileID: 21300000, guid: 7a325653fe998d44fad946975f665944, type: 3}
+  - {fileID: 21300000, guid: 15061294ce070e945897a0910fe009c2, type: 3}
 --- !u!136 &13676522
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -152,22 +152,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: sprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: c2e8c21ee4d65fd49945c3d8c64e32d6,
+      objectReference: {fileID: 21300000, guid: 9fad72d2b178bee41af52addff6736c1,
         type: 3}
     - target: {fileID: 0}
       propertyPath: sprites.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: c36bc42f1b2eaf74d9d03972e67ed69e,
+      objectReference: {fileID: 21300000, guid: 85425a94a952e5a47aa269286e3c5e79,
         type: 3}
     - target: {fileID: 0}
       propertyPath: sprites.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 2e063a5aa46fd9c428b5cc7edbd8f49b,
+      objectReference: {fileID: 21300000, guid: 7a325653fe998d44fad946975f665944,
         type: 3}
     - target: {fileID: 0}
       propertyPath: sprites.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: c36bc42f1b2eaf74d9d03972e67ed69e,
+      objectReference: {fileID: 21300000, guid: 15061294ce070e945897a0910fe009c2,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
