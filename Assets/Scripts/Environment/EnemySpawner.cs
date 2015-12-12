@@ -5,22 +5,20 @@ public class EnemySpawner : MonoBehaviour {
 
 	int difficulty = 3;
 
-	enum GameState {
+	enum WaveState {
 		waveSpawning,
 		waveSpawnOver,
 		restBetweenWaves,
-		Victory, 
-		Defeat
 	}
 
 	public GameObject enemyPrefab;
 
 	float interval = 0.1f;
 	float lastCheckTime = 0.0f;
-	GameState currentState;
+	WaveState currentState;
 	int waveNum;
 	int enemiesToSpawn;
-	float timeBetweenWaves = 10;
+	float timeBetweenWaves = 1;
 	float timeToNextWave;
 	PlayerData pData;
 
@@ -31,7 +29,7 @@ public class EnemySpawner : MonoBehaviour {
 	Bounds spawnBounds;
 
 	void Awake() {
-		currentState = GameState.restBetweenWaves;
+		currentState = WaveState.restBetweenWaves;
 		waveNum = 1;
 		enemiesToSpawn = getNumberOfEnemies (waveNum);
 		timeBetweenSpawns = getTimeBetweenSpawns (waveNum);
@@ -49,13 +47,11 @@ public class EnemySpawner : MonoBehaviour {
 		if(Time.timeSinceLevelLoad > lastCheckTime + interval) {
 			//Debug.Log (currentState);
 			lastCheckTime = Time.timeSinceLevelLoad;
-			if(pData.gameIsLost())
-				currentState = GameState.Defeat;
 			
 			switch(currentState) {
-			case GameState.waveSpawning:
+			case WaveState.waveSpawning:
 				if (enemiesToSpawn <= 0) {
-					currentState = GameState.waveSpawnOver;
+					currentState = WaveState.waveSpawnOver;
 				} else {
 					if (Time.timeSinceLevelLoad > timeSinceLastSpawn + timeBetweenSpawns) {
 						timeSinceLastSpawn = Time.timeSinceLevelLoad;
@@ -63,27 +59,18 @@ public class EnemySpawner : MonoBehaviour {
 					}
 				}
 				break;
-			case GameState.waveSpawnOver :
+			case WaveState.waveSpawnOver :
 				if(LiveBearCount() == 0) {
 					timeToNextWave = Time.timeSinceLevelLoad + timeBetweenWaves;
-					currentState = GameState.restBetweenWaves;
+					currentState = WaveState.restBetweenWaves;
 				} break;
-			case GameState.Victory :
-				Debug.Log("Victory!");
-				Time.timeScale = 0;
-				break;
-				// If the rest time is over, continue with the next wave.
-			case GameState.restBetweenWaves:
+			case WaveState.restBetweenWaves:
 				if(Time.timeSinceLevelLoad > timeToNextWave) {
 					waveNum++;
 					enemiesToSpawn = getNumberOfEnemies (waveNum);
 					timeBetweenSpawns = getTimeBetweenSpawns (waveNum);
-					currentState = GameState.waveSpawning;
+					currentState = WaveState.waveSpawning;
 				}
-				break;
-			case GameState.Defeat:
-				Debug.Log("Defeat!");
-				Time.timeScale = 0;
 				break;
 			default:
 				break;
@@ -92,8 +79,7 @@ public class EnemySpawner : MonoBehaviour {
 	}
 		
 	int getNumberOfEnemies (int waveNum) {
-	//	return waveNum * waveNum * difficulty;
-		return 3;
+		return waveNum * waveNum * difficulty;
 	}
 
 	void SpawnBear() {
@@ -108,9 +94,5 @@ public class EnemySpawner : MonoBehaviour {
 
 	float getTimeBetweenSpawns(int waveNum) {
 		return Mathf.Min (1.5f, Mathf.Max (0.4f, baseTimeBetweenSpawns / Mathf.Sqrt(waveNum)));
-	}
-
-	IEnumerator waitForEndOfFrame() {
-		yield return 0;
 	}
 }
