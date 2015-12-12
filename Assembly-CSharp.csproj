@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8AEB9FDF-4E7E-6E5F-7B46-C3209367A226}</ProjectGuid>
+    <ProjectGuid>{69E026EA-F25C-8CBA-FE12-61910A12C07C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,10 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FadeToWhiteAnimate.cs" />
-     <Compile Include="Assets\GameStateManager.cs" />
+     <Compile Include="Assets\Scripts\Effects\FadeToWhiteAnimate.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\Environment\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\Environment\GameStateManager.cs" />
      <Compile Include="Assets\Scripts\Environment\UIManager.cs" />
      <Compile Include="Assets\Scripts\MarketSystem\OpenVentureLogic.cs" />
      <Compile Include="Assets\Scripts\MarketSystem\OverallMarketLogic.cs" />
