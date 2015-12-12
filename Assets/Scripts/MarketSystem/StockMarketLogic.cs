@@ -20,7 +20,8 @@ public class StockMarketLogic : MonoBehaviour {
 		sellingUnit = currentUnit; 
 		cost = 0;
 		worth = currentUnit * currentStockPricePerUnit;
-		averageCost = cost / currentUnit;
+		uint division = currentUnit > 0 ? currentUnit : 1;
+		averageCost = cost / division;
 		profitLossDifference = worth - cost;
 	}
 	

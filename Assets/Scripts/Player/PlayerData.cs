@@ -9,6 +9,8 @@ public class PlayerData : MonoBehaviour {
 	float bearsKilled = 0;
 	float moveSpeed = 0;
 
+	float victoryCashRequirement = 5000000;
+
 	UIManager ui;
 
 	float gameTimeElapsed = 0.0f;
@@ -28,6 +30,10 @@ public class PlayerData : MonoBehaviour {
 		lose = false;
 		ui = GameObject.Find ("GameManager").GetComponent<UIManager> ();
 		gameTimeElapsed = 0.0f;
+	}
+
+	public bool gameIsWon() {
+		return cash >= victoryCashRequirement;
 	}
 
 	// Please refer to scene manager.
