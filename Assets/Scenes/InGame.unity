@@ -1684,7 +1684,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 973309506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.031, y: 0.429, z: -1.64}
+  m_LocalPosition: {x: -2.031, y: 0, z: -1.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 888655352}
@@ -1699,7 +1699,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7, y: 1, z: 0.1}
+  m_Size: {x: 7, y: 0.5, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1000877853
 GameObject:
@@ -1915,23 +1915,7 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: f531397fabc905149ab45dd9b4b1bc96, type: 3}
-<<<<<<< HEAD
---- !u!114 &1179056582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1179056576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcba7cfbb9321d945a28a4f603331e43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ventureCapital: 1000
---- !u!1 &1264778687
-=======
 --- !u!1 &1320573233
->>>>>>> origin/master
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
