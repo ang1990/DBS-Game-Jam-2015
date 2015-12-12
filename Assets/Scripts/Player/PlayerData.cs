@@ -3,18 +3,17 @@ using System.Collections;
 
 public class PlayerData : MonoBehaviour {
 
-	uint cash = 0;
+	public uint cash = 0;
+    public uint stock = 0;
+    uint maxStockPrice = 500000;
 	float bearsKilled = 0;
 	float moveSpeed = 0;
+
+	UIManager ui;
 
 	float gameTimeElapsed = 0.0f;
 
 	bool lose = false;
-
-	// Please refer to scene manager.
-	bool IsPlaying() {
-		return false;
-	}
 
 	void FixedUpdate() {
 		if (IsPlaying ())
@@ -23,42 +22,70 @@ public class PlayerData : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake() {
-		cash = 1000;
+		cash = 1000000;
+        stock = 50000;
 		bearsKilled = 0;
 		lose = false;
-
+		ui = GameObject.Find ("GameManager").GetComponent<UIManager> ();
 		gameTimeElapsed = 0.0f;
 	}
 
-	void AddCash(uint _amt = 1) {
-		cash += _amt;
+	// Please refer to scene manager.
+	public bool IsPlaying() {
+		return false;
 	}
 
-	void LoseCash(uint _amt = 1) {
+	public void AddCash(uint _amt = 1) {
+		cash += _amt;
+		ui.UpdateCashText (cash);
+	}
+
+	public void LoseCash(uint _amt = 1) {
 		if (cash < _amt) {
 			lose = true;
 			cash = 0;
 		}
 		else
 			cash -= _amt;
+		ui.UpdateCashText (cash);
 	}
 
-	bool SpendCash(uint _amt = 1) {
+	public bool SpendCash(uint _amt = 1) {
 		if (cash < _amt)
 			return false;
 		cash -= _amt;
+		ui.UpdateCashText (cash);
 		return true;
 	}
 
-	void KillBear() {
+	public void KillBear() {
 		bearsKilled += 1;
 	}
 
-	float getMoveSpeed() {
+	public float getMoveSpeed() {
 		return moveSpeed;
 	}
 
-	bool gameIsLost() {
+	public bool gameIsLost() {
 		return lose;
 	}
+
+    // For button presses
+    public void addStockPressed()
+    {
+        if (stock + ui.stockChange <= maxStockPrice)
+        {
+            stock += ui.stockChange;
+            ui.UpdateStockText(stock);
+        }
+    }
+
+    public void minusStockPressed()
+    {
+        if (stock >= ui.stockChange)
+        {
+            stock -= ui.stockChange;
+            ui.UpdateStockText(stock);
+        }
+    }
 }

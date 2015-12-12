@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{69E026EA-F25C-8CBA-FE12-61910A12C07C}</ProjectGuid>
+    <ProjectGuid>{8AEB9FDF-4E7E-6E5F-7B46-C3209367A226}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,9 +45,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Environment\UIManager.cs" />
      <Compile Include="Assets\Scripts\Menu\MainMenuManager.cs" />
+=======
+     <Compile Include="Assets\Scripts\Enemy\EnemyBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Environment\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\Environment\UIManager.cs" />
+     <Compile Include="Assets\Scripts\Menu\MainMenuManager.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerBehaviour.cs" />
+>>>>>>> origin/master
      <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
+     <Compile Include="Assets\Scripts\sprite_rend.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
