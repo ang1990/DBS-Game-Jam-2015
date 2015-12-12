@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\Environment\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Environment\UIManager.cs" />
