@@ -24,8 +24,12 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
+		Debug.Log (other.tag);
 		if (other.CompareTag ("EnemyEndpoint")) {
 			Explode ();
+		} else if (other.CompareTag ("PlayerWeapon")) {
+			other.enabled = false;
+			ReceiveHit ();
 		}
 	}
 

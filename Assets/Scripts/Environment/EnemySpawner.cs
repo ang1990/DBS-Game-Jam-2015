@@ -47,7 +47,7 @@ public class EnemySpawner : MonoBehaviour {
 	void Update() {
 		// Check game state every interval.
 		if(Time.timeSinceLevelLoad > lastCheckTime + interval) {
-			Debug.Log (currentState);
+			//Debug.Log (currentState);
 			lastCheckTime = Time.timeSinceLevelLoad;
 			if(pData.gameIsLost())
 				currentState = GameState.Defeat;
@@ -103,7 +103,7 @@ public class EnemySpawner : MonoBehaviour {
 		Vector3 newSpawnPoint = new Vector3 (xCoord, yCoord, zCoord);
 		Instantiate (enemyPrefab, newSpawnPoint, Quaternion.identity);
 		enemiesToSpawn--;
-		Debug.Log("Bears left: " + enemiesToSpawn.ToString());
+//		Debug.Log("Bears left: " + enemiesToSpawn.ToString());
 	}
 
 	float getTimeBetweenSpawns(int waveNum) {
