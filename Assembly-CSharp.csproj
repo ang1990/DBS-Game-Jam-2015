@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\MarketSystem\OpenVentureLogic.cs" />
      <Compile Include="Assets\Scripts\MarketSystem\OverallMarketLogic.cs" />
      <Compile Include="Assets\Scripts\MarketSystem\StockMarketLogic.cs" />
+     <Compile Include="Assets\Scripts\Menu\CreditManager.cs" />
      <Compile Include="Assets\Scripts\Menu\MainMenuManager.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerBehaviour.cs" />

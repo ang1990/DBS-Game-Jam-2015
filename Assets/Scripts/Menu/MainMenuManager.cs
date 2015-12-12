@@ -5,7 +5,6 @@ public class MainMenuManager : MonoBehaviour {
 
     public GameObject MainMenuObject;
     public GameObject InstructionsObject;
-    public GameObject CreditsObject;
 
 	// Use this for initialization
 	void Start () {
@@ -13,8 +12,6 @@ public class MainMenuManager : MonoBehaviour {
         MainMenuObject.SetActive(true);
         InstructionsObject = GameObject.Find("InstructionsObject");
         InstructionsObject.SetActive(false);
-        CreditsObject = GameObject.Find("CreditObject");
-        CreditsObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -24,9 +21,9 @@ public class MainMenuManager : MonoBehaviour {
 
 	}
 
-    public void PlayButton(int index)
+    public void PlayButton()
     {
-        Application.LoadLevel(index);
+        Application.LoadLevel("InGame");
     }
 
     public void InstructionButton(GameObject UIObject)
@@ -41,10 +38,9 @@ public class MainMenuManager : MonoBehaviour {
         MainMenuObject.SetActive(true);
     }
 
-    public void CreditButton(GameObject UIObject)
+    public void CreditButton()
     {
-        UIObject.SetActive(true);
-        MainMenuObject.SetActive(false);
+		Application.LoadLevel ("Credits");
     }
     public void QuitButton()
     {
