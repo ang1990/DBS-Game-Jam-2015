@@ -24,8 +24,6 @@ public class PlayerData : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake() {
-		cash = 1000000;
-        stock = 50000;
 		bearsKilled = 0;
 		lose = false;
 		ui = GameObject.Find ("GameManager").GetComponent<UIManager> ();

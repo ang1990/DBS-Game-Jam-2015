@@ -19,3 +19,5 @@ Library/guidmapper
 *.dwlt
 Library/expandedItems
 Library/guidmapper
+*.userprefs
+DBS-Game-Jam-2015.userprefs
