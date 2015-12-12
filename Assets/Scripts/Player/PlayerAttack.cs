@@ -5,7 +5,8 @@ public class PlayerAttack : MonoBehaviour {
 
 	public AudioClip swoosh;
 	float lastAttackTime;
-	float attackTime = 0.25f;
+	float attackTime = 0.2f;
+	float cooldownTime = 0.3f;
 	Transform _transform;
 	BoxCollider coll;
 
@@ -16,9 +17,12 @@ public class PlayerAttack : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (0))
-			StartCoroutine(Attack ());
-
+		if (Input.GetMouseButtonDown (0)) {
+			if (Time.timeSinceLevelLoad > lastAttackTime + cooldownTime) {
+				lastAttackTime = Time.timeSinceLevelLoad;
+				StartCoroutine (Attack ());
+			}
+		}
 	}
 
 	IEnumerator Attack() {
