@@ -6,7 +6,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	Rigidbody _rigidBody;
 	PlayerData pData;
 
-	GameObject explosion;
+	public GameObject explosion;
 
 	float moveSpeed = 1.5f;
 	int bombDamage = 100;
@@ -16,7 +16,6 @@ public class EnemyBehaviour : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		explosion = null;
 		_rigidBody = GetComponent<Rigidbody>();
 		pData = GameObject.Find ("GameManager").GetComponent<PlayerData> ();
 	}
@@ -27,7 +26,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		Debug.Log (other.tag);
+		//Debug.Log (other.tag);
 		if (other.CompareTag ("EnemyEndpoint")) {
 			Explode ();
 		} else if (other.CompareTag ("PlayerWeapon")) {
@@ -44,8 +43,7 @@ public class EnemyBehaviour : MonoBehaviour {
 		
 	void Explode() {
 		pData.LoseCash ((uint)bombDamage);
-		if (explosion != null)
-			Instantiate (explosion);
+		Instantiate (explosion, transform.position + new Vector3(0.0f,0.0f, -0.3f), Quaternion.identity);
 		Destroy (gameObject);
 	}
 
