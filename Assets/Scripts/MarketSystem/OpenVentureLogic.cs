@@ -17,8 +17,8 @@ public class OpenVentureLogic : MonoBehaviour {
 	
 	// Update is called once per frame
 	uint GenerateProfit () {
-		profitPercentage = Random.Range (1.01, 1.05);
-		uint newCapital = capital * profitPercentage;
+		profitPercentage = Random.Range (1.01f, 1.05f);
+		uint newCapital = (uint) (capital * profitPercentage);
 		return newCapital - capital;
 	}
 }
