@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour {
 		cashText = GameObject.Find ("MoneyDispText").GetComponent<Text> ();
 		averageCostText = GameObject.Find ("AverageCostDisplay").GetComponent<Text> ();
 		currentStockPriceText = GameObject.Find ("StockDisplay").GetComponent<Text> ();
+		currentStockUnitText = GameObject.Find ("StockAmountDisplay").GetComponent<Text> ();
 		costsText = GameObject.Find ("CostDisplay").GetComponent<Text> ();
 		worthText = GameObject.Find ("WorthDisplay").GetComponent<Text> ();
 		profitLossText = GameObject.Find ("ProfitLossDisplay").GetComponent<Text> ();
@@ -45,9 +46,9 @@ public class UIManager : MonoBehaviour {
 		averageCostText.text = "$" + averageCostVal.ToString();
 		currentStockPriceText.text = "$" + currentStockPriceVal.ToString ();
 		currentStockUnitText.text = currentUnitVal.ToString ();
-		costsText.text = costsVal.ToString ();
-		worthText.text = worthVal.ToString ();
-		profitLossText.text = profitLossVal.ToString ();
+		costsText.text = "$" + costsVal.ToString ();
+		worthText.text = "$" + worthVal.ToString ();
+		profitLossText.text = "$" + profitLossVal.ToString ();
 	}
 
 	public void UpdateCashText(uint value) {
