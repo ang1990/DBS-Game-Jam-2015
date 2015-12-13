@@ -14,6 +14,8 @@ public class UIManager : MonoBehaviour {
 
     PlayerData playerData;
 	StockMarketLogic stockMarketLogic;
+	GameStateManager gameStateManager;
+	GameObject pauseScreen;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +29,9 @@ public class UIManager : MonoBehaviour {
 
 		playerData = GameObject.Find ("GameManager").GetComponent<PlayerData> ();
 		stockMarketLogic = GameObject.Find ("GameManager").GetComponent<StockMarketLogic> ();
+		gameStateManager = GameObject.Find ("GameManager").GetComponent<GameStateManager> ();
+		pauseScreen = GameObject.Find ("PauseScreen");
+		pauseScreen.SetActive (false);
 
         cashText.text = "$" + playerData.cash.ToString();
 		averageCostText.text = "$" + stockMarketLogic.averageCost.ToString();
@@ -59,6 +64,27 @@ public class UIManager : MonoBehaviour {
 
 	public void UpdateCashText(int value) {
 		cashText.text = "$" + value.ToString ();
+	}
+
+	public void newGamePressed(){
+		Time.timeScale = 1.0f;
+		gameStateManager.currentState = GameStateManager.GameState.Playing;
+		Application.LoadLevel ("InGame");
+	}
+
+	public void exitPressed(){
+		Time.timeScale = 1.0f;
+		Application.LoadLevel ("TitleScreen");
+	}
+
+	public void pausePressed(){
+		pauseScreen.SetActive (true);
+		Time.timeScale = 0.0f;
+	}
+
+	public void resumePressed(){
+		pauseScreen.SetActive (false);
+		Time.timeScale = 1.0f;
 	}
 
 }

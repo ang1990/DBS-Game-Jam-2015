@@ -9,13 +9,20 @@ public class GameStateManager : MonoBehaviour {
 		Defeat
 	}
 
-	GameState currentState;
+	GameObject winScreen;
+	GameObject loseScreen;
+	public GameState currentState;
 	PlayerData pData;
 
 	// Use this for initialization
 	void Awake () {
+		winScreen = GameObject.Find ("WinScreen");
+		loseScreen = GameObject.Find ("LoseScreen");
 		currentState = GameState.Playing;
 		pData = GetComponent<PlayerData> ();
+
+		winScreen.SetActive (false);
+		loseScreen.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -29,10 +36,12 @@ public class GameStateManager : MonoBehaviour {
 			}
 			break;
 		case GameState.Victory:
-			//Application.LoadLevel ("Win");
+			winScreen.SetActive (true);
+			Time.timeScale = 0.0f;
 			break;
 		case GameState.Defeat:
-			//Application.LoadLevel ("Lose");
+			loseScreen.SetActive (true);
+			Time.timeScale = 0.0f;
 			break;
 		default:
 			break;
