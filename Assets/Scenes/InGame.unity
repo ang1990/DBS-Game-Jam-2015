@@ -3185,6 +3185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f108457fde105324dbf5c16157e780a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lowestProfitPercentage: 1.01
+  highestProfitPercentage: 1.05
 --- !u!114 &2094979073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3196,7 +3198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1046c78445da78143823372c0b4f5e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerInSec: 0
+  timerInSec: 5
+  stockDecrementInPercentage: 0.96
+  stockIncrementInPercentage: 1.06
 --- !u!114 &2094979074
 MonoBehaviour:
   m_ObjectHideFlags: 0
