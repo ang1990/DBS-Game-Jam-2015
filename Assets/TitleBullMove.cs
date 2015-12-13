@@ -15,6 +15,7 @@ public class TitleBullMove : MonoBehaviour {
 	void Start () {
 		spriteRenderer = transform.GetComponent<SpriteRenderer> ();
 		startTime = Time.timeSinceLevelLoad;
+		Time.timeScale = 1;
 	}
 
 	// Update is called once per frame

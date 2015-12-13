@@ -23,7 +23,7 @@ public class BullAnimator : MonoBehaviour {
 	int currentFrame = 0;
 
 	// Use this for initialization
-	void Awake () {
+	void Start () {
 		sr = GetComponent<SpriteRenderer> ();
 		currentState = BullAnimState.Idle;
 		timeSinceLastUpdate = Time.timeSinceLevelLoad;
