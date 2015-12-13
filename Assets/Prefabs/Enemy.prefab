@@ -59,6 +59,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 195646, guid: 89bdd4d7bab6d4846a05ae8ae6cbcf19, type: 2}
+  bombDamage: 10000
+  cashGain: 2000
 --- !u!114 &11491762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,6 +171,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 15061294ce070e945897a0910fe009c2,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: bombDamage
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cashGain
+      value: 2000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 144504}

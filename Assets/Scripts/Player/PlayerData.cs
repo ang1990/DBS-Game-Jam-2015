@@ -43,6 +43,10 @@ public class PlayerData : MonoBehaviour {
 		return cash >= victoryCashRequirement;
 	}
 
+	public bool gameIsLost() {
+		return isLosing;
+	}
+
 	// Please refer to scene manager.
 	public bool IsPlaying() {
 		return false;
@@ -77,10 +81,6 @@ public class PlayerData : MonoBehaviour {
 
 	public float getMoveSpeed() {
 		return moveSpeed;
-	}
-
-	public bool gameIsLost() {
-		return isLosing;
 	}
 
     // For button presses
