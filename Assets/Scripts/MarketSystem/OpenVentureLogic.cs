@@ -4,7 +4,8 @@ using System.Collections;
 public class OpenVentureLogic : MonoBehaviour {
 
 	int capital = 0;
-	float profitPercentage = 0;
+	public float lowestProfitPercentage = 1.01f;
+	public float highestProfitPercentage = 1.05f;
 	PlayerData playerData;
 	OverallMarketLogic overallMarketLogic;
 
@@ -17,7 +18,7 @@ public class OpenVentureLogic : MonoBehaviour {
 	
 	// Update is called once per frame
 	int GenerateProfit () {
-		profitPercentage = Random.Range (1.01f, 1.05f);
+		float profitPercentage = Random.Range (1.01f, 1.05f);
 		int newCapital = (int) (capital * profitPercentage);
 		return newCapital - capital;
 	}
