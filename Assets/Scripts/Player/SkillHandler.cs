@@ -82,6 +82,7 @@ public class SkillHandler : MonoBehaviour {
 			scr.stun (updateSpriteTime);
 		}
 		yield return new WaitForSeconds (updateSpriteTime);
+		bears = GameObject.FindGameObjectsWithTag ("Enemy");
 		foreach (GameObject bear in bears) {
 			EnemyBehaviour scr = bear.GetComponent<EnemyBehaviour> ();
 			scr.ReceiveHit ();
