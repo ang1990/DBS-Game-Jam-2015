@@ -20,7 +20,7 @@ public class OpenVentureLogic : MonoBehaviour {
 		buildingBehaviour = building.GetComponent<BuildingBehaviour>();
 		openCapital = buildingBehaviour.ventureCapital;
 		currentCapital = openCapital;
-		InvokeRepeating ("GenerateProfit", 0.0f, overallMarketLogic.timerInSec);
+		InvokeRepeating ("GenerateProfit", 0.0f, overallMarketLogic.capitalTimerInSec);
 		this.gameObject.GetComponent<TextMesh> ().text = "$" + currentCapital.ToString();
 	}
 

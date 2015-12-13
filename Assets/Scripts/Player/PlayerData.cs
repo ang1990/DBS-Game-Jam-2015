@@ -10,9 +10,7 @@ public class PlayerData : MonoBehaviour {
 	public float victoryCashRequirement = 5000000f;
 
 	UIManager ui;
-	OverallMarketLogic overallMarketLogic;
 	StockMarketLogic stockMarketLogic;
-	OpenVentureLogic openVentureLogic;
 
 	float gameTimeElapsed = 0.0f;
 	float timeElapsedInteger = 0.0f;
@@ -32,9 +30,7 @@ public class PlayerData : MonoBehaviour {
 		bearsKilled = 0;
 		isLosing = false;
 		ui = GameObject.Find ("GameManager").GetComponent<UIManager> ();
-		overallMarketLogic = GameObject.Find ("GameManager").GetComponent<OverallMarketLogic> ();
 		stockMarketLogic = GameObject.Find ("GameManager").GetComponent<StockMarketLogic> ();
-		openVentureLogic = GameObject.Find ("GameManager").GetComponent<OpenVentureLogic> ();
 		gameTimeElapsed = 0.0f;
 		timeElapsedInteger = 0.0f;
 	}

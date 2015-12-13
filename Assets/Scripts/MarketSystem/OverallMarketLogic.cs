@@ -3,7 +3,8 @@ using System.Collections;
 
 public class OverallMarketLogic : MonoBehaviour {
 
-	public float timerInSec = 5.0f;
+	public float stockPriceTimerInSec = 4.0f;
+	public float capitalTimerInSec = 2.0f;
 	public float stockDecrementInPercentage = 0.96f;
 	public float stockIncrementInPercentage = 1.06f;
 
@@ -12,7 +13,7 @@ public class OverallMarketLogic : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		InvokeRepeating ("changeStockPrice", timerInSec, timerInSec);
+		InvokeRepeating ("changeStockPrice", stockPriceTimerInSec, stockPriceTimerInSec);
 		stockMarketLogic = GameObject.Find ("GameManager").GetComponent<StockMarketLogic> ();
 		ui = GameObject.Find ("GameManager").GetComponent<UIManager> ();
 	}
