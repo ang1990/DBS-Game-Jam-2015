@@ -4717,7 +4717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cash: 500000
-  victoryCashRequirement: 600000
+  victoryCashRequirement: 4000000
 --- !u!114 &2094979071
 MonoBehaviour:
   m_ObjectHideFlags: 0
