@@ -2012,6 +2012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99eec60b40a6a964ab64ac87c63d1a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  footstep: {fileID: 8300000, guid: f958be490c633414aa1296490bcf7318, type: 3}
 --- !u!114 &952759382
 MonoBehaviour:
   m_ObjectHideFlags: 0
