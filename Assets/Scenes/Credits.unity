@@ -1382,33 +1382,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Credits
-
-
-    Ludology is developed by Team Ludology
-
-
-    Producer
-
-    Mark Ang
-
-
-    Designer/Content/Asset Development
-
-    Renaldy A. Widjaja, Goh Wei Ling
-
-
-    Programmer
-
-    Mark Ang, Tan Tack Poh
-
-
-    UX Designer and Programmer
-
-    Tan Tack Poh
-
-
-    Created for DBS Game Jam 2015'
+  m_Text: "Credits\n\nMooveau Riche is developed by Team Ludomatic\n\nMark Ang: Producer,
+    Programmer (Gameplay and UI), UX Designer\n\nRenaldy A. Widjaja: Designer/Content/Asset
+    Development, Programmer (UI)\n\nGoh Wei Ling: Designer/Content/Asset Development\n\nTan
+    Tack Poh: Programmer (Gameplay and UI), \n\nCreated for DBS Game Jam 2015"
 --- !u!222 &2062279688
 CanvasRenderer:
   m_ObjectHideFlags: 0
