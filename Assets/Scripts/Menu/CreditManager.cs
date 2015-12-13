@@ -13,12 +13,12 @@ public class CreditManager : MonoBehaviour {
 
     public void PlayButton()
     {
-        Application.LoadLevel("InGame");
+        Application.LoadLevel("Tutorial");
     }
 
     public void BackButton()
     {
-		Application.LoadLevel("MainMenu");
+		Application.LoadLevel("TitleScene");
     }
 		
 }

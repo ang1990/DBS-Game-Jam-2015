@@ -74,12 +74,14 @@ public class UIManager : MonoBehaviour {
 
 	public void exitPressed(){
 		Time.timeScale = 1.0f;
-		Application.LoadLevel ("TitleScreen");
+		Application.LoadLevel ("TitleScene");
 	}
 
 	public void pausePressed(){
-		pauseScreen.SetActive (true);
-		Time.timeScale = 0.0f;
+		if(gameStateManager.currentState == GameStateManager.GameState.Playing){
+			pauseScreen.SetActive (true);
+			Time.timeScale = 0.0f;
+		}
 	}
 
 	public void resumePressed(){
