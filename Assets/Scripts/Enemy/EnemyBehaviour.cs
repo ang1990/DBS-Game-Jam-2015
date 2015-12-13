@@ -43,7 +43,7 @@ public class EnemyBehaviour : MonoBehaviour {
 		
 	void Explode() {
 		pData.LoseCash ((int)bombDamage);
-		Instantiate (explosion, transform.position + new Vector3(0.0f,0.0f, -0.3f), Quaternion.identity);
+		Instantiate (explosion, transform.position, Quaternion.AngleAxis(35,Vector3.right));
 		Destroy (gameObject);
 	}
 
@@ -51,6 +51,7 @@ public class EnemyBehaviour : MonoBehaviour {
 		pData.AddCash (50);
 		SkillHandler playerSkill = GameObject.Find ("Player").GetComponent<SkillHandler> ();
 		playerSkill.AddCharge ();
+		Instantiate (explosion, transform.position, Quaternion.AngleAxis(35,Vector3.right));
 		Destroy (gameObject);
 	}
 }

@@ -9,11 +9,14 @@ public class ExplosionAnimator : MonoBehaviour {
 	int currentFrame;
 	SpriteRenderer sr;
 
+	public AudioClip bombSound;
+
 	// Use this for initialization
 	void Awake () {
 		sr = GetComponent<SpriteRenderer> ();
 		currentFrame = 0;
 		lastRefreshTime = Time.timeSinceLevelLoad;
+		AudioSource.PlayClipAtPoint (bombSound, transform.position);
 	}
 	
 	// Update is called once per frame
