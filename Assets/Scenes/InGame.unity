@@ -1961,7 +1961,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 26d26a9cf70a18c41a20adf18f731b7d, type: 3}
   - {fileID: 21300000, guid: eb8b9cd7baa8e56409d80dafed074857, type: 3}
   - {fileID: 21300000, guid: f28753163783a354f9fda803e6fb2a76, type: 3}
-  - {fileID: 21300000, guid: 9ad2c9ef0fab38c48a7a6b20591dc0cd, type: 3}
+  - {fileID: 21300000, guid: eb8b9cd7baa8e56409d80dafed074857, type: 3}
   strikeSprites:
   - {fileID: 21300000, guid: 280037fcffc6b71499f1f03185e6dd21, type: 3}
   - {fileID: 21300000, guid: 4884fece733db1b498e2fd0c2e0c90e3, type: 3}

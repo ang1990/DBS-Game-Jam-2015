@@ -1,12 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\PlayerData.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TitleBullMove.cs">
     <Files>
-      <File FileName="Assets\BullAnimator.cs" Line="21" Column="34" />
-      <File FileName="Assets\Cheats.cs" Line="12" Column="48" />
-      <File FileName="Assets\Scripts\MarketSystem\StockMarketLogic.cs" Line="6" Column="37" />
-      <File FileName="Assets\Scripts\MarketSystem\OverallMarketLogic.cs" Line="22" Column="23" />
-      <File FileName="Assets\Scripts\Player\PlayerData.cs" Line="18" Column="29" />
+      <File FileName="Assets\TitleBullMove.cs" Line="22" Column="55" />
+      <File FileName="Assets\Scripts\displayMovement.cs" Line="28" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

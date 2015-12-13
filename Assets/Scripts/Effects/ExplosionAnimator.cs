@@ -22,7 +22,6 @@ public class ExplosionAnimator : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Time.timeSinceLevelLoad > lastRefreshTime + refreshTime) {
-			Debug.Log ("Current Frame: " + currentFrame.ToString ());
 			lastRefreshTime = Time.timeSinceLevelLoad;
 			currentFrame++;
 			if (currentFrame >= 4)
