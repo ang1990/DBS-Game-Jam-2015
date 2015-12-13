@@ -286,6 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   ventureCapital: 2000000
+  activateClip: {fileID: 8300000, guid: e2d2e63a0a291e54b8a32fec12992728, type: 3}
 --- !u!95 &202275898
 Animator:
   serializedVersion: 3
@@ -1044,6 +1045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   ventureCapital: 1000000
+  activateClip: {fileID: 8300000, guid: e2d2e63a0a291e54b8a32fec12992728, type: 3}
 --- !u!1 &616922771
 GameObject:
   m_ObjectHideFlags: 0
@@ -2377,6 +2379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   ventureCapital: 500000
+  activateClip: {fileID: 8300000, guid: e2d2e63a0a291e54b8a32fec12992728, type: 3}
 --- !u!1 &1320573233
 GameObject:
   m_ObjectHideFlags: 0
@@ -3039,7 +3042,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9d6e3be0b25600e40a10d88ba4e04e7d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3477,6 +3480,7 @@ MonoBehaviour:
   worth: 0
   profitLossDifference: 0
   buyingUnit: 100
+  chaChing: {fileID: 8300000, guid: e2d2e63a0a291e54b8a32fec12992728, type: 3}
 --- !u!114 &2094979073
 MonoBehaviour:
   m_ObjectHideFlags: 0

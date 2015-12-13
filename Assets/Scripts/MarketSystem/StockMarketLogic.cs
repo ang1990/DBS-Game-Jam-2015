@@ -9,8 +9,8 @@ public class StockMarketLogic : MonoBehaviour {
 	public int cost = 0;
 	public int worth = 0;
 	public int profitLossDifference = 0;
-
 	public int buyingUnit = 100;
+	public AudioClip chaChing;
 
 	UIManager ui;
 
@@ -36,7 +36,9 @@ public class StockMarketLogic : MonoBehaviour {
 		averageCost = (int) cost / currentUnit;
 		worth = currentUnit * currentStockPricePerUnit;
 		profitLossDifference = worth - cost;
+
 		ui.UpdateStockMarketText (averageCost, currentStockPricePerUnit, currentUnit, cost, worth, profitLossDifference);
+		AudioSource.PlayClipAtPoint (chaChing, transform.position);
 	}
 
 	public int getSellingStock () {
@@ -47,7 +49,10 @@ public class StockMarketLogic : MonoBehaviour {
 		cost = 0;
 		worth = currentUnit * currentStockPricePerUnit;
 		profitLossDifference = worth - cost;
+
 		ui.UpdateStockMarketText (averageCost, currentStockPricePerUnit, currentUnit, cost, worth, profitLossDifference);
+		AudioSource.PlayClipAtPoint (chaChing, transform.position);
+
 		return finalProfit;
 	}
 

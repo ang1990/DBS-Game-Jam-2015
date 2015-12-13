@@ -33,7 +33,7 @@ public class PlayerBehaviour : MonoBehaviour {
 			anim.setIdle ();
 		}
 		if (timeMovedSinceLastFootstep > timeBetweenFootsteps) {
-			AudioSource.PlayClipAtPoint (footstep, transform.position);
+			AudioSource.PlayClipAtPoint (footstep, transform.position, 0.2f);
 			timeMovedSinceLastFootstep = 0;
 		}
 

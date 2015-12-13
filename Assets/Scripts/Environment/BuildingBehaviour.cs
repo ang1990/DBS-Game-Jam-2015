@@ -7,11 +7,13 @@ public class BuildingBehaviour : MonoBehaviour {
 	float riseSpeed = 10.0f;
 	Transform _transform;
 
+
 	PlayerData pData;
 
 	// Change value in inspector!
 	public bool isActive = false;
 	public int ventureCapital;
+	public AudioClip activateClip;
 
 	// Use this for initialization
 	void Awake () {
@@ -35,7 +37,9 @@ public class BuildingBehaviour : MonoBehaviour {
 
 	void OnMouseUpAsButton() {
 		Debug.Log ("OnMouseDown");
-		if (pData.SpendCash (ventureCapital))
+		if (pData.SpendCash (ventureCapital)) {
+			AudioSource.PlayClipAtPoint (activateClip, _transform.position);
 			isActive = true;
+		}
 	}
 }
