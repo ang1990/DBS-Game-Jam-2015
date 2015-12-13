@@ -45,6 +45,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e9e1375a02297fe43aa97c3e681c8cce, type: 3}
   - {fileID: 21300000, guid: 2604c12bef8685147800c4c4b4ecbd7a, type: 3}
   - {fileID: 21300000, guid: bfd3147514b6cb4408f8dece6fcc7a98, type: 3}
+  bombSound: {fileID: 8300000, guid: d43ce343b61cadc4f976c5b77639af7b, type: 3}
 --- !u!212 &21239542
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -118,6 +119,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bombSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d43ce343b61cadc4f976c5b77639af7b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 195646}
