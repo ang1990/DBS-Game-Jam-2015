@@ -3414,7 +3414,6 @@ GameObject:
   - 114: {fileID: 2094979073}
   - 114: {fileID: 2094979071}
   - 114: {fileID: 2094979074}
-  - 114: {fileID: 2094979072}
   - 114: {fileID: 2094979075}
   m_Layer: 0
   m_Name: GameManager
@@ -3477,21 +3476,6 @@ MonoBehaviour:
   worth: 0
   profitLossDifference: 0
   buyingUnit: 100
---- !u!114 &2094979072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2094979067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f108457fde105324dbf5c16157e780a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openCapital: 500000
-  building: {fileID: 0}
-  lowestProfitPercentage: 1.01
-  highestProfitPercentage: 1.05
 --- !u!114 &2094979073
 MonoBehaviour:
   m_ObjectHideFlags: 0
