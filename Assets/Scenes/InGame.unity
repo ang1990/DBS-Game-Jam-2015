@@ -933,8 +933,8 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: 0.8, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &525440299
 MonoBehaviour:
@@ -2772,6 +2772,10 @@ Prefab:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0e497be0defe6cc4a8da03dcf1ed2ffa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e497be0defe6cc4a8da03dcf1ed2ffa, type: 3}
   m_IsPrefabParent: 0
@@ -3067,14 +3071,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.986207, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.7176471, g: 0.7176471, b: 0.7176471, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f649efb2664f7dc4d8eddb4f2a25e0f6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3320,6 +3324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f108457fde105324dbf5c16157e780a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openCapital: 500000
+  building: {fileID: 0}
   lowestProfitPercentage: 1.01
   highestProfitPercentage: 1.05
 --- !u!114 &2094979073
