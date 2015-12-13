@@ -9,8 +9,8 @@ public class EnemyBehaviour : MonoBehaviour {
 	public GameObject explosion;
 
 	float moveSpeed = 1.5f;
-	int bombDamage = 100;
-	int cashGain = 50;
+	public int bombDamage = 10000;
+	public int cashGain = 2000;
 
 	bool isMoving = true;
 
@@ -48,7 +48,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
 	public void ReceiveHit() {
-		pData.AddCash (50);
+		pData.AddCash (cashGain);
 		SkillHandler playerSkill = GameObject.Find ("Player").GetComponent<SkillHandler> ();
 		playerSkill.AddCharge ();
 		Instantiate (explosion, transform.position, Quaternion.AngleAxis(35,Vector3.right));
