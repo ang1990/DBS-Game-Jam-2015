@@ -25,6 +25,9 @@ public class OverallMarketLogic : MonoBehaviour {
 
 	void changeStockPrice(){
 		stockMarketLogic.currentStockPricePerUnit = (int) ((double)stockMarketLogic.currentStockPricePerUnit * Random.Range (stockDecrementInPercentage, stockIncrementInPercentage));
+		if(stockMarketLogic.currentStockPricePerUnit <= 10){
+			stockMarketLogic.currentStockPricePerUnit = 10;
+		}
 		stockMarketLogic.worth = stockMarketLogic.currentUnit * stockMarketLogic.currentStockPricePerUnit;
 		stockMarketLogic.profitLossDifference = stockMarketLogic.worth - stockMarketLogic.cost;
 		ui.UpdateStockMarketText (stockMarketLogic.averageCost, stockMarketLogic.currentStockPricePerUnit, stockMarketLogic.currentUnit, stockMarketLogic.cost, stockMarketLogic.worth, stockMarketLogic.profitLossDifference);

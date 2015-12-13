@@ -49,6 +49,12 @@ public class UIManager : MonoBehaviour {
 		costsText.text = "$" + costsVal.ToString ();
 		worthText.text = "$" + worthVal.ToString ();
 		profitLossText.text = "$" + profitLossVal.ToString ();
+
+		if(profitLossVal < 0){
+			profitLossText.color = new Color (255f, 0f, 0f);
+		} else {
+			profitLossText.color = new Color (0f, 255f, 0f);
+		}
 	}
 
 	public void UpdateCashText(int value) {
