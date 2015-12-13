@@ -9,7 +9,7 @@ public class MainMenuManager : MonoBehaviour {
 
     public void PlayButton()
     {
-        Application.LoadLevel("InGame");
+        Application.LoadLevel("Tutorial");
     }
 
     public void CreditButton()
