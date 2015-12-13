@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\BearAnimator.cs" />
      <Compile Include="Assets\BullAnimator.cs" />
+     <Compile Include="Assets\Cheats.cs" />
      <Compile Include="Assets\Scripts\Effects\ExplosionAnimator.cs" />
      <Compile Include="Assets\Scripts\Effects\FadeToWhiteAnimate.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyBehaviour.cs" />

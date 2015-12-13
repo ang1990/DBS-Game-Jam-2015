@@ -16,8 +16,12 @@ public class OverallMarketLogic : MonoBehaviour {
 		stockMarketLogic = GameObject.Find ("GameManager").GetComponent<StockMarketLogic> ();
 		ui = GameObject.Find ("GameManager").GetComponent<UIManager> ();
 	}
-	
-	// Update is called once per frame
+
+	public void Depression() {
+		stockMarketLogic.currentStockPricePerUnit /= 2;
+		changeStockPrice ();
+	}
+
 	void changeStockPrice(){
 		stockMarketLogic.currentStockPricePerUnit = (int) ((double)stockMarketLogic.currentStockPricePerUnit * Random.Range (stockDecrementInPercentage, stockIncrementInPercentage));
 		stockMarketLogic.worth = stockMarketLogic.currentUnit * stockMarketLogic.currentStockPricePerUnit;
