@@ -5,12 +5,12 @@ public class BuildingBehaviour : MonoBehaviour {
 
 	float timeActivated;
 	float riseSpeed = 10.0f;
-	bool isActive;
 	Transform _transform;
 
 	PlayerData pData;
 
 	// Change value in inspector!
+	public bool isActive = false;
 	public int ventureCapital;
 
 	// Use this for initialization

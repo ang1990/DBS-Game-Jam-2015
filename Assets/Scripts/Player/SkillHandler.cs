@@ -59,6 +59,10 @@ public class SkillHandler : MonoBehaviour {
 				img.sprite = chargedSprites [currentChargedSpriteNum];
 			}
 		}
+
+		if(Input.GetKeyDown(KeyCode.R)){
+			SkillActivated();
+		}
 	}
 
 	public void SkillActivated() {

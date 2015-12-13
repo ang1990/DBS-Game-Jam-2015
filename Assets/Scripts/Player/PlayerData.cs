@@ -64,7 +64,7 @@ public class PlayerData : MonoBehaviour {
 	}
 
 	public bool SpendCash(int _amt = 1) {
-		if (cash <= _amt)
+		if (cash < _amt)
 			return false;
 		cash -= _amt;
 		ui.UpdateCashText (cash);
