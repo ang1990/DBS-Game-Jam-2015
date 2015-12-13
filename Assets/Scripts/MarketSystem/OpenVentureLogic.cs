@@ -18,7 +18,7 @@ public class OpenVentureLogic : MonoBehaviour {
 		overallMarketLogic = GameObject.Find ("GameManager").GetComponent<OverallMarketLogic> ();
 		InvokeRepeating ("GenerateProfit", 0.0f, overallMarketLogic.timerInSec);
 		currentCapital = openCapital;
-		this.gameObject.GetComponent<Text> ().text = currentCapital.ToString();
+		GetComponent<Text> ().text = currentCapital.ToString();
 	}
 	
 	// Update is called once per frame

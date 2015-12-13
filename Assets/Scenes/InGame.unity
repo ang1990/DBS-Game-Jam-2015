@@ -637,7 +637,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &341686672
 MeshFilter:
@@ -653,7 +653,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 341686670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8, y: 0.48, z: 5}
+  m_LocalPosition: {x: -3.47, y: 0.48, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1483,7 +1483,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 853217174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.965, y: 0, z: 0}
+  m_LocalPosition: {x: -3.479, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 888655352}
@@ -1498,7 +1498,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 4}
+  m_Size: {x: 0.1, y: 0.5, z: 4}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &888655351
 GameObject:
@@ -1748,7 +1748,7 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -1.31, z: 0}
 --- !u!4 &952759380
 Transform:
   m_ObjectHideFlags: 0
@@ -1756,7 +1756,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 952759375}
   m_LocalRotation: {x: 0.30070582, y: 0, z: 0, w: 0.95371693}
-  m_LocalPosition: {x: -2.775, y: 0.168, z: 4.22383}
+  m_LocalPosition: {x: -2.775, y: 0.4, z: 5.31}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 296118790}
@@ -2233,6 +2233,18 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: f531397fabc905149ab45dd9b4b1bc96, type: 3}
+--- !u!114 &1179056578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1179056576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcba7cfbb9321d945a28a4f603331e43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ventureCapital: 1000
 --- !u!1 &1320573233
 GameObject:
   m_ObjectHideFlags: 0
@@ -3320,6 +3332,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f108457fde105324dbf5c16157e780a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openCapital: 500000
+  building: {fileID: 0}
   lowestProfitPercentage: 1.01
   highestProfitPercentage: 1.05
 --- !u!114 &2094979073
